@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho - Sustentabilidade no Campo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Projeto <span>Agrinho</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre o Tema</a></li>
+                    <li><a href="#dicas">Dicas Sustentáveis</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Cultivando um Futuro Melhor</h2>
+            <p>Conectando a tecnologia, a educação e a sustentabilidade no meio rural.</p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="conteudo">
+        <div class="container">
+            <h2>O Concurso Agrinho</h2>
+            <p>O Agrinho incentiva a prática da cidadania e a reflexão sobre a conservação ambiental, a saúde e o desenvolvimento sustentável no campo. Nosso objetivo com este site é espalhar o conhecimento sobre como pequenas ações transformam a agricultura e protegem o planeta.</p>
+        </div>
+    </section>
+
+    <section id="dicas" class="cards-section">
+        <div class="container">
+            <h2>Pilares da Sustentabilidade</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Economia de Água</h3>
+                    <p>Uso de técnicas de irrigação gota a gota e captação da água da chuva para reduzir o desperdício nas plantações.</p>
+                </div>
+                <div class="card">
+                    <h3>Energia Limpa</h3>
+                    <p>Incentivo ao uso de painéis solares nas propriedades rurais para gerar energia limpa e barata.</p>
+                </div>
+                <div class="card">
+                    <h3>Solo Saudável</h3>
+                    <p>Rotação de culturas e adubação orgânica para manter a terra fértil sem prejudicar o ecossistema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="formulario-section">
+        <div class="container">
+            <h2>Participe da Mudança</h2>
+            <p>Deixe sua ideia ou sugestão para melhorar o meio ambiente na sua comunidade!</p>
+            <form id="formAgrinho">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+                <textarea id="mensagem" placeholder="Sua sugestão sustentável..." required></textarea>
+                <button type="submit" class="btn">Enviar Ideia</button>
+            </form>
+            <div id="mensagemSucesso" class="escondido">Obrigado por colaborar com o Agrinho! Sua ideia foi enviada.</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Concurso Agrinho - Desenvolvido para fins educativos.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
