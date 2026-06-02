@@ -1,0 +1,190 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f9f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2e7d32;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header h1 span {
+    color: #81c784;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #81c784;
+}
+
+/* Banner Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #388e3c;
+}
+
+/* Seções Gerais */
+.conteudo {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.conteudo h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* Cards */
+.cards-section {
+    background-color: #e8f5e9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.cards-section h2 {
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 5px solid #4caf50;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+/* Formulário */
+.formulario-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+#mensagemSucesso {
+    margin-top: 15px;
+    color: #2e7d32;
+    font-weight: bold;
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
