@@ -31,12 +31,3 @@ O projeto foi construído utilizando tecnologias web puras, sem a necessidade de
 
 ---
 
-## 📂 Estrutura de Arquivos
-
-A organização do repositório foi simplificada para facilitar a manutenção e leitura do código:
-
-```text
-├── index.html      # Página principal do site (estrutura)
-├── style.css       # Estilos, cores e responsividade (design)
-├── script.js       # Comportamentos interativos (lógica)
-└── README.md       # Documentação completa do projeto
