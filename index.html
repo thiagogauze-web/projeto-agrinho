@@ -3,80 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Agrinho - Sustentabilidade no Campo</title>
+    <title>Agrinho Tech - Dashboard & Sustentabilidade</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>Projeto <span>Agrinho</span></h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre o Tema</a></li>
-                    <li><a href="#dicas">Dicas Sustentáveis</a></li>
+        <div class="container navbar">
+            <div class="logo">
+                <i class="fa-solid fa-seedling"></i> Agrinho<span>Tech</span>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active">Início</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
     <section id="inicio" class="hero">
-        <div class="container">
-            <h2>Cultivando um Futuro Melhor</h2>
-            <p>Conectando a tecnologia, a educação e a sustentabilidade no meio rural.</p>
-            <a href="#sobre" class="btn">Saiba Mais</a>
-        </div>
-    </section>
-
-    <section id="sobre" class="conteudo">
-        <div class="container">
-            <h2>O Concurso Agrinho</h2>
-            <p>O Agrinho incentiva a prática da cidadania e a reflexão sobre a conservação ambiental, a saúde e o desenvolvimento sustentável no campo. Nosso objetivo com este site é espalhar o conhecimento sobre como pequenas ações transformam a agricultura e protegem o planeta.</p>
-        </div>
-    </section>
-
-    <section id="dicas" class="cards-section">
-        <div class="container">
-            <h2>Pilares da Sustentabilidade</h2>
-            <div class="grid-cards">
-                <div class="card">
-                    <h3>Economia de Água</h3>
-                    <p>Uso de técnicas de irrigação gota a gota e captação da água da chuva para reduzir o desperdício nas plantações.</p>
-                </div>
-                <div class="card">
-                    <h3>Energia Limpa</h3>
-                    <p>Incentivo ao uso de painéis solares nas propriedades rurais para gerar energia limpa e barata.</p>
-                </div>
-                <div class="card">
-                    <h3>Solo Saudável</h3>
-                    <p>Rotação de culturas e adubação orgânica para manter a terra fértil sem prejudicar o ecossistema.</p>
-                </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <span class="badge">Inovação 2026</span>
+            <h1>O Futuro do Campo é Inteligente</h1>
+            <p>Monitore dados em tempo real, aplique conceitos de agricultura de precisão e transforme a sustentabilidade em resultados práticos.</p>
+            <div class="hero-btns">
+                <a href="#dashboard" class="btn btn-primary">Ver Dashboard</a>
+                <a href="#projetos" class="btn btn-secondary">Explorar Ideias</a>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="formulario-section">
-        <div class="container">
-            <h2>Participe da Mudança</h2>
-            <p>Deixe sua ideia ou sugestão para melhorar o meio ambiente na sua comunidade!</p>
-            <form id="formAgrinho">
-                <input type="text" id="nome" placeholder="Seu Nome" required>
-                <input type="email" id="email" placeholder="Seu E-mail" required>
-                <textarea id="mensagem" placeholder="Sua sugestão sustentável..." required></textarea>
-                <button type="submit" class="btn">Enviar Ideia</button>
-            </form>
-            <div id="mensagemSucesso" class="escondido">Obrigado por colaborar com o Agrinho! Sua ideia foi enviada.</div>
+    <section id="dashboard" class="dashboard-section container">
+        <div class="section-header">
+            <h2>Fazenda Conectada</h2>
+            <p>Simulação em tempo real de métricas capturadas por sensores IoT (Internet das Coisas) no campo.</p>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon blue"><i class="fa-solid fa-droplet"></i></div>
+                <div class="metric-data">
+                    <h3>Umidade do Solo</h3>
+                    <p id="txt-umidade">62%</p>
+                    <span class="status ideal">Ideal</span>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon yellow"><i class="fa-solid fa-sun"></i></div>
+                <div class="metric-data">
+                    <h3>Energia Gerada</h3>
+                    <p id="txt-energia">4.2 kWh</p>
+                    <span class="status">Hoje</span>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon green"><i class="fa-solid fa-hand-holding-droplet"></i></div>
+                <div class="metric-data">
+                    <h3>Água Economizada</h3>
+                    <p>15.400 L</p>
+                    <span class="status positivo">+12% este mês</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3>Consumo de Recursos (Semanal)</h3>
+                <canvas id="chartConsumo"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Distribuição de Culturas (Uso de Solo)</h3>
+                <canvas id="chartCulturas"></canvas>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <section id="projetos" class="projects-section">
         <div class="container">
-            <p>&copy; 2026 Concurso Agrinho - Desenvolvido para fins educativos.</p>
-        </div>
-    </footer>
+            <div class="section-header">
+                <h2>Banco de Ideias Agrinho</h2>
+                <p>Filtre e descubra projetos inovadores criados para transformar o ecossistema agrícola.</p>
+            </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="tech">Tecnologia</button>
+                <button class="filter-btn" data-filter="sustentavel">Sustentabilidade</button>
+                <button class="filter-btn" data-filter="edu">Educação</button>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                <div class="project-card" data-category="tech">
+                    <div class="project-img tech-bg">
+                        <i class="fa-solid fa-drone"></i>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">Tecnologia</span>
+                        <h3>Drones Mapeadores</h3>
+                        <p>Uso de inteligência artificial em drones para identificar pr
