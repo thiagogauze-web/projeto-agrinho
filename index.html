@@ -109,4 +109,70 @@
                     <div class="project-body">
                         <span class="project-tag">Tecnologia</span>
                         <h3>Drones Mapeadores</h3>
-                        <p>Uso de inteligência artificial em drones para identificar pr
+                        <p>Uso de inteligência artificial em drones para identificar pragas e falhas no plantio de forma precoce.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="sustentavel">
+                    <div class="project-img sust-bg">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">Sustentabilidade</span>
+                        <h3>Compostagem Automatizada</h3>
+                        <p>Sensores térmicos aceleram e controlam a transformação de resíduos orgânicos em adubo de alta qualidade.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="edu">
+                    <div class="project-img edu-bg">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">Educação</span>
+                        <h3>Horta Escolar Tech</h3>
+                        <p>Aulas práticas integrando programação com Arduino e automação de rega para alunos da rede pública.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container footer-wrapper">
+            <div class="footer-brand">
+                <h3>Agrinho Tech</h3>
+                <p>Unindo tecnologia, educação e práticas sustentáveis para cultivar um futuro melhor para as novas gerações.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-form">
+                <h4>Envie sua Ideia de Projeto</h4>
+                <form id="advanced-form">
+                    <div class="form-row">
+                        <input type="text" id="dev-name" placeholder="Seu Nome" required>
+                        <select id="proj-category" required>
+                            <option value="" disabled selected>Categoria</option>
+                            <option value="tech">Tecnologia</option>
+                            <option value="sustentavel">Sustentabilidade</option>
+                            <option value="edu">Educação</option>
+                        </select>
+                    </div>
+                    <textarea id="proj-desc" rows="4" placeholder="Descreva brevemente o seu projeto inovador..." required></textarea>
+                    <button type="submit" class="btn-submit">Enviar e Publicar</button>
+                </form>
+                <div id="toast" class="toast hidden"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Agrinho Tech. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
