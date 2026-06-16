@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
 }
 
-/* Navbar Customizada */
+/* Navbar */
 header {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
@@ -80,7 +80,7 @@ header {
 
 .menu-toggle { display: none; font-size: 22px; cursor: pointer; }
 
-/* Hero com Imagem Complexa */
+/* Hero Section */
 .hero {
     position: relative;
     background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad496?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
@@ -103,6 +103,7 @@ header {
 }
 
 .badge {
+    display: inline-block;
     background: var(--primary);
     padding: 6px 14px;
     border-radius: 20px;
@@ -126,7 +127,7 @@ header {
 .btn-secondary { background: rgba(255,255,255,0.1); color: white; backdrop-filter: blur(5px); }
 .btn-secondary:hover { background: rgba(255,255,255,0.2); }
 
-/* Dashboard Grid Layout */
+/* Dashboard Layout */
 .section-header { text-align: center; margin: 60px 0 40px; }
 .section-header h2 { font-size: 32px; color: var(--dark); }
 .section-header p { color: var(--text-muted); margin-top: 5px; }
@@ -162,7 +163,7 @@ header {
 .metric-icon.green { background: var(--primary-light); color: var(--primary); }
 
 .metric-data h3 { font-size: 14px; color: var(--text-muted); }
-.metric-data p { font-size: 24px; font-weight: 700; }
+.metric-data p { font-size: 24px; font-weight: 700; margin: 2px 0; }
 .status { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 4px; background: #e2e8f0; }
 .status.ideal { background: var(--primary-light); color: var(--primary); }
 .status.positivo { background: #dbeafe; color: var(--blue); }
@@ -180,7 +181,7 @@ header {
 }
 .chart-container h3 { font-size: 16px; margin-bottom: 20px; color: var(--dark); }
 
-/* Filtro de Projetos Dinâmico */
+/* Filtro de Projetos */
 .projects-section { background: #f1f5f9; padding: 60px 0; margin-top: 60px; }
 .filter-buttons { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; }
 
@@ -208,9 +209,9 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
     transition: var(--transition);
+    opacity: 1;
 }
 .project-card:hover { transform: translateY(-5px); }
-
 .project-card.hide { display: none; }
 
 .project-img {
@@ -228,13 +229,13 @@ header {
 .project-body { padding: 20px; }
 .project-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--primary); }
 .project-body h3 { font-size: 18px; margin: 5px 0 10px; }
-.project-body p { font-size: 14px; color: var(--text-muted); }
+.project-body p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
 
-/* Footer Complexo */
+/* Footer & Form */
 footer { background: var(--dark); color: white; padding: 70px 0 20px; }
 .footer-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
 }
 .footer-brand h3 { font-size: 26px; margin-bottom: 15px; color: var(--primary-light); }
@@ -255,6 +256,8 @@ footer { background: var(--dark); color: white; padding: 70px 0 20px; }
     font-size: 15px;
     width: 100%;
 }
+#advanced-form select option { background: #1e293b; }
+
 .btn-submit {
     background: var(--primary);
     color: white;
@@ -269,10 +272,10 @@ footer { background: var(--dark); color: white; padding: 70px 0 20px; }
 
 .footer-bottom { text-align: center; margin-top: 50px; border-top: 1px solid #334155; padding-top: 20px; color: #64748b; font-size: 13px; }
 
-.toast { padding: 12px; border-radius: 6px; background: #22c55e; color: white; font-weight: 500; text-align: center; }
+.toast { margin-top: 15px; padding: 12px; border-radius: 6px; background: #22c55e; color: white; font-weight: 500; text-align: center; }
 .hidden { display: none; }
 
-/* Responsividade Avançada */
+/* Responsividade */
 @media(max-width: 900px) {
     .charts-grid, .footer-wrapper { grid-template-columns: 1fr; }
 }
@@ -285,6 +288,7 @@ footer { background: var(--dark); color: white; padding: 70px 0 20px; }
         top: 100%; left: 0; width: 100%;
         background: white; padding: 20px;
         box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        gap: 12px;
     }
     .nav-links.active { display: flex; }
     .menu-toggle { display: block; }
